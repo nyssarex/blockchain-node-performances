@@ -31,7 +31,7 @@ block_results.rename(columns={'time_to_execute': 'avg time to execute method, s'
 block_results = block_results.sort_values(by='avg place', ascending=True)
 block_results.reset_index(drop=True, inplace=True)
 block_results.to_html('html/block_results.html', index=False)
-
+block_results.batch_time_id[0].to_html('html/time.html', index=False)
 balance_results = balance_results.groupby('provider')[['time_to_execute', 'Rank']].mean().reset_index()
 balance_results.rename(columns={'time_to_execute': 'avg time to execute method, s', 'Rank': 'avg place'}, inplace=True)
 balance_results = balance_results.sort_values(by='avg place', ascending=True)
@@ -49,3 +49,4 @@ concatenated_df = concatenated_df.groupby('provider')[['avg time to execute meth
 concatenated_df = concatenated_df.sort_values(by='avg place', ascending=True)
 concatenated_df.reset_index(drop=True, inplace=True)
 concatenated_df.to_html('html/overall_results.html', index=False)
+
