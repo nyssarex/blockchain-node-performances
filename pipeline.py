@@ -144,6 +144,6 @@ balance_results = pd.DataFrame(df_balance, columns=columns_balance)
 call_results = pd.DataFrame(df_call, columns=columns_call)
 
 
-block_results.to_csv('block_results.csv',index=False)
-balance_results.to_csv('balance_results.csv',index=False)
-call_results.to_csv('call_results.csv',index=False)
+block_results.to_csv('csv/block_results.csv',index=False)
+balance_results.to_csv('csv/balance_results.csv',index=False)
+call_results.to_csv('csv/call_results.csv',index=False)
