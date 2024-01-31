@@ -4,29 +4,96 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GitHub Pages with Plotly</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
+
+    <style>
+    
+        body {
+            font-family: 'Roboto', sans-serif; /* Use the chosen font */
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1, h2, h3, p {
+            margin: 0;
+        }
+
+        /* Additional styling for your elements goes here */
+    
+
+        .container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: left;
+        }
+
+        .text {
+            margin-left: 200px; /* Adjust the margin as needed */
+        }
+        
+    </style>
 </head>
 <body>
+    <header class="bg-primary text-white text-center py-3">
+        <h1>Breaking into node providers.</h1>
+        <h5>And a node providers, a node providers provide. And they do it even when they are not appreciated, or respected, or even loved. They simply bears up and they does it. Because they are node providers. (c) Gustavo Nakamoto</h5>
 
-    <h1>Breaking into node providers.</h1>
-    <h2> Cast: Alchemy|Ankr|Chainstack|Getblock|Infura|Quicknode </h2>
-    <h3>Main cast genuinely provided their free endpoints. Every day we run to test them. We do 50 times eth.get_balance, 50 times eth.get_block, 50 times eth.call </h3>
-    <h4>Using python ThreadPoolExecutor we test who provides output first and consistent. Test by yourself before you start DApp in order to achieve crystal 99.9% uptime purity</h4>
-    <h5>It is just pet project to cook something </h5>
+    </header>
+    
+ 
 
-    <p>And a node providers, a node providers provide. And they do it even when they are not appreciated, or respected, or even loved. They simply bears up and they does it. Because they are node providers.</p>
-    <p> Overall results looks like this</p>
+        
+    <div class="container mt-4">
+        
+            <img src="web3.png">
+            <div class="text">
+            <h2> Cast:Alchemy|Ankr|Chainstack|Getblock|Infura|Quicknode </h2>
+            <p>
+            Main cast genuinely provided their free endpoints.<br>
+            Every day we run to test them.
+            <ul>
+                <li>50 times eth.get_balance</li>
+                <li>50 times eth.get_block</li>
+                <li>50 times eth.call </li>
+            </ul>
+            Using python ThreadPoolExecutor we test who provides output first and consistent. <br>
+            Test by yourself before you start DApp in order to achieve crystal 99.9% uptime 
+            
+        </p>
+        </div>
+
+    </div>
+
+    <footer class="bg-dark text-white text-center py-3 mt-4">  </footer>
+    
+    <header class="bg-primary text-white text-center py-3"><h3> Overall results looks like this</h3></header>
+    <div class="container mt-4">
+    
     <iframe src="html/overall_results.html" width="400" height="300"></iframe>
-    <p> eth.get_block </p>
+    <div class="text"> Out of 150 tests today, there are average time to execute method and average providers rank on each test</div>
+    </div>
+    <header class="bg-primary text-white text-center py-3"><h3> eth.get_block </h3></header>
+    
     <iframe src="html/block_results.html"  width="400" height="300"></iframe>
-    <iframe src="html/getblock.html" width="900" height="300"></iframe>
-    <p> eth.get_balance </p>
+    <iframe src="html/getblock.html" width="900" height="600"></iframe>
+    <header class="bg-primary text-white text-center py-3"><h3> eth.get_balance </h3></header>
+    
     <iframe src="html/balance_results.html"  width="400" height="300"></iframe>
-    <iframe src="html/getbalance.html" width="900" height="300"></iframe>
-    <p> eth.call </p>
+    <iframe src="html/getbalance.html" width="900" height="600"></iframe>
+    <header class="bg-primary text-white text-center py-3"><h3> eth.call </h3></header>
+    
     <iframe src="html/call_results.html" width="400" height="300"></iframe>
-    <iframe src="html/ethcall.html" width="900" height="300"></iframe>
-    
-    
+    <iframe src="html/ethcall.html" width="900" height="600"></iframe>
+    <footer class="bg-dark text-white text-center py-3 mt-4">
+        <p>&copy; done by <a href="https://www.linkedin.com/in/nyssambayev/">nyssarex</a></p>
+    </footer>
+        <!-- Add Bootstrap JS (optional, for some features) -->
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.7/dist/umd/popper.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
 
 </body>
 </html>
