@@ -25,13 +25,14 @@ fig.write_html('html/getbalance.html')
 fig = px.box(call_results,x='provider',  y='time_to_execute', title="w3.eth.call()",log_y=True, hover_data='batch_run_id',
 labels={'provider': 'blockchain node provider', 'time_to_execute': 'time to execute, s'})
 fig.write_html('html/ethcall.html')
-
+data = {'test did on ': [block_results['batch_time_id'][0]]}
+pd.DataFrame(data).to_html('html/time.html', index=False)
 block_results = block_results.groupby('provider')[['time_to_execute', 'Rank']].mean().reset_index()
 block_results.rename(columns={'time_to_execute': 'avg time to execute method, s', 'Rank': 'avg place'}, inplace=True)
 block_results = block_results.sort_values(by='avg place', ascending=True)
 block_results.reset_index(drop=True, inplace=True)
 block_results.to_html('html/block_results.html', index=False)
-block_results.batch_time_id[0].to_html('html/time.html', index=False)
+
 balance_results = balance_results.groupby('provider')[['time_to_execute', 'Rank']].mean().reset_index()
 balance_results.rename(columns={'time_to_execute': 'avg time to execute method, s', 'Rank': 'avg place'}, inplace=True)
 balance_results = balance_results.sort_values(by='avg place', ascending=True)

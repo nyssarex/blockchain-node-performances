@@ -38,7 +38,7 @@
 </head>
 <body>
     <header class="bg-primary text-white text-center py-3">
-        <h1>Breaking into node providers.</h1>
+        <h1>Breaking into node providers. [ETH edition]</h1>
         <h5>And a node providers, a node providers provide. And they do it even when they are not appreciated, or respected, or even loved. They simply bears up and they does it. Because they are node providers. (c) Gustavo Nakamoto</h5>
 
     </header>
@@ -52,7 +52,7 @@
             <div class="text">
             <h2> Cast:Alchemy|Ankr|Chainstack|Getblock|Infura|Quicknode </h2>
             <p>
-            Main cast genuinely provided their free endpoints.<br>
+            Main cast genuinely provided their free eth endpoints.<br>
             Every day we run to test them.
             <ul>
                 <li>50 times eth.get_balance</li>
@@ -60,8 +60,8 @@
                 <li>50 times eth.call </li>
             </ul>
             Using python ThreadPoolExecutor we test who provides output first and consistent. <br>
-            Test by yourself before you start DApp in order to achieve crystal 99.9% uptime 
-            
+            Test by yourself before you start DApp in order to achieve crystal 99.9% uptime <br>
+            <iframe src="html/time.html" width="200" height="100"></iframe>
         </p>
         </div>
 
@@ -74,9 +74,20 @@
     
     <iframe src="html/overall_results.html" width="400" height="300"></iframe>
     <div class="text"> Out of 150 tests today, there are average time to execute method and average providers rank on each test</div>
+    <ul>
+        <li>*q1,q3: it is the median of the lower,upper half of the dataset</li>
+        <li>*upper/lower fence: upper/lower fence is a boundary above which data points are considered potential outliers</li>
+        
+    </ul>
     </div>
-    <header class="bg-primary text-white text-center py-3"><h3> eth.get_block </h3></header>
     
+    <header class="bg-primary text-white text-center py-3"><h3> eth.get_block </h3></header>
+    <h5> 
+        A longer body (box) might indicate instability or inconsistency, while a compact body suggests a more reliable and consistent structure
+    </h5> <br>
+    <h5>
+    If there are unusual bumps or protrusions (outliers), it might indicate unexpected values that could be problematic</h5><br>
+    <h5>Longer whiskers suggest a wider range, which might mean the body can reach both high and low values. Shorter whiskers imply a more limited range</h5><br>
     <iframe src="html/block_results.html"  width="400" height="300"></iframe>
     <iframe src="html/getblock.html" width="900" height="600"></iframe>
     <header class="bg-primary text-white text-center py-3"><h3> eth.get_balance </h3></header>
