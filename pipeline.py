@@ -10,12 +10,12 @@ import plotly.express as px
 
 
 
-chainstack_rpc = os.environ.get('CHAINSTACK')
-alchemy_rpc = os.environ.get('ALCHEMY')
-ankr_rpc = os.environ.get('ANKR')
-quicknode_rpc = os.environ.get('QUICKNODE')
-infura_rpc = os.environ.get('INFURA')
-getblock_rpc = os.environ.get('GETBLOCK')
+chainstack_rpc = os.environ['chainstack_rpc']
+alchemy_rpc = os.environ['alchemy_rpc']
+ankr_rpc = os.environ['ankr_rpc']
+quicknode_rpc = os.environ['quicknode_rpc']
+infura_rpc = os.environ['infura_rpc']
+getblock_rpc = os.environ['getblock_rpc']
 
 
 df_block = []
