@@ -6,7 +6,7 @@ name: Daily Scripts
   workflow_dispatch: null
 permissions:
   contents: write
-  env: null
+env:
   chainstack_rpc: ${{secrets.CHAINSTACK}}
   alchemy_rpc: ${{secrets.ALCHEMY}}
   ankr_rpc: ${{secrets.ANKR}}
