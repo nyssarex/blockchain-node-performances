@@ -7,6 +7,8 @@ name: Daily Scripts
 jobs:
   build:
     runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
     
     steps:
       - name: Cache Python Packages
@@ -22,7 +24,7 @@ jobs:
       - if: ${{ steps.cache-python.outputs.cache-hit != 'true' }}
         
         name: Install pip packages
-        uses: actions/checkout@v4
+        
         continue-on-error: true
         run: |
 
