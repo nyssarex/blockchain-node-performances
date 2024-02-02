@@ -1,3 +1,1 @@
-runs ones a day on a website
-checks latest block ,time 
-store in duck db res?
+Check here to have a look report [here](https://nyssarex.github.io/blockchain-node-providers-performances/)
