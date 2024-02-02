@@ -1,3 +1,3 @@
 import os
-
-print(os.environ.get('CHAINSTACK')[:10])
+chainstack_rpc = os.environ.get('CHAINSTACK')
+print(chainstack_rpc[:3])
