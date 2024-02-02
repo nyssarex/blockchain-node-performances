@@ -21,6 +21,5 @@ jobs:
 
       - name: Run Script 2
         run: |
-          # Command to execute script 2
-                      # Command to execute script 2
-python3 html.py
+            # Command to execute script 2
+            python3 html.py
