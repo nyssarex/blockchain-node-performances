@@ -4,13 +4,15 @@ name: Daily Scripts
   schedule:
     - cron: 0 0 * * *
   workflow_dispatch: null
-env:
+permissions:
+  contents: write
+  env: null
   chainstack_rpc: ${{secrets.CHAINSTACK}}
   alchemy_rpc: ${{secrets.ALCHEMY}}
   ankr_rpc: ${{secrets.ANKR}}
   quicknode_rpc: ${{secrets.QUICKNODE}}
   infura_rpc: ${{secrets.INFURA}}
-  getblock_rpc:  ${{secrets.GETBLOCK}}
+  getblock_rpc: ${{secrets.GETBLOCK}}
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -30,17 +32,15 @@ jobs:
         run: pip install -r ./requirements.txt
       - name: List pip packages
         run: echo "Cache Hit Status - ${{ steps.cache-python.outputs.cache-hit }}"; pip list packages
-      
       - name: Run test
         run: |
           # Command to execute script 1
           python3 test.py
       
-      - name: Run Script 1
+      
+      - name: Commit report
         run: |
-          # Command to execute script 1
-          python3 pipeline.py
-      - name: Run Script 2
-        run: |
-          # Command to execute script 2
-          python3 html.py
+          git config --global user.name "nyssarex"
+          git config --global user.email "amir.nyssambayev@gmail.com"
+          git commit -am "Automated report"
+          git push
