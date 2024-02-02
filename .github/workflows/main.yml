@@ -17,17 +17,16 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v4
-    - uses: actions/setup-python@v5
-    with:
-      python-version: '3.9'
-      cache: 'pip' # caching pip dependencies
-    - run: pip install -r requirements.txt
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.9'
+          cache: pip
+      - run: pip install -r requirements.txt
       - name: Run test
         run: |
           # Command to execute script 1
           python3 test.py
-      
       - name: Run Script 1
         run: |
           # Command to execute script 1
@@ -41,4 +40,5 @@ jobs:
           git config --global user.name "nyssarex"
           git config --global user.email "amir.nyssambayev@gmail.com"
           git commit -am "Automated report"
+          # Configure a personal access token for pushing
           git push
