@@ -9,27 +9,18 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Cache Python Packages
-        id: cache-python
-        uses: actions/cache@v4
+      - uses: actions/setup-python@v5
         with:
-          path: ~/.cache/pip
-          key: ${{ runner.os }}-pip-${{ hashFiles('**/requirements.txt') }}
-          restore-keys: |
-            ${{ runner.os }}-pip-
-
-      - if: ${{ steps.cache-python.outputs.cache-hit != 'true' }}
-        name: Install pip packages
-        continue-on-error: true
-        run: pip install -r ./requirements.txt
-      - name: List pip packages
-        run: echo "Cache Hit Status - ${{ steps.cache-python.outputs.cache-hit }}"; pip list packages
+          python-version: '3.1'
+          cache: pip
+      - run: pip install -r requirements.txt
       - name: Run Script 1
         run: |
-          # Command to execute script 1
-          python3 pipeline.py
+            # Command to execute script 1
+            python3 pipeline.py
 
       - name: Run Script 2
         run: |
           # Command to execute script 2
-          python3 html.py
+                      # Command to execute script 2
+python3 html.py
