@@ -15,9 +15,9 @@ jobs:
     - name: Run Script 1
       run: |
         # Command to execute script 1
-        echo "python3 pipeline.py"
+        python3 pipeline.py
 
     - name: Run Script 2
       run: |
         # Command to execute script 2
-        echo "python3 html.py"
+        python3 html.py
