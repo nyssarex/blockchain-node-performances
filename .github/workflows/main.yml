@@ -20,4 +20,4 @@ jobs:
     - name: Run Script 2
       run: |
         # Command to execute script 2
-        echo "python3 pipeline.py"
+        echo "python3 html.py"
