@@ -14,6 +14,10 @@ jobs:
           python-version: '3.9'
           cache: pip
       - run: pip install -r requirements.txt
+      - name: Run debug
+        run: |
+            
+            python3 test.py
       - name: Run Script 1
         run: |
             # Command to execute script 1
