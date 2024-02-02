@@ -7,9 +7,7 @@ name: Daily Scripts
 jobs:
   build:
     runs-on: ubuntu-latest
-    defaults:
-      run:
-        working-directory: ${{ github.workspace }}
+    
     steps:
       - name: Cache Python Packages
         id: cache-python
@@ -24,10 +22,13 @@ jobs:
       - if: ${{ steps.cache-python.outputs.cache-hit != 'true' }}
         
         name: Install pip packages
-        continue-on-error: true
-        run: pip install -r ./requirements.txt
-      - name: Checkout code
         uses: actions/checkout@v4
+        continue-on-error: true
+        run: |
+
+          pip install -r ./requirements.txt
+      - name: Checkout code
+        
       - name: Run Script 1
         run: |
           # Command to execute script 1
