@@ -85,7 +85,7 @@ def call(provider,token):
     
     w3 = Web3(Web3.HTTPProvider(token))
     t_start = time()
-    block = w3.eth.call({'value': 0, 'gas': 3382848757700, 'maxFeePerGas': 3382848757700, 'maxPriorityFeePerGas': 3382848757700, 'to': '0xc305c901078781C232A2a521C2aF7980f8385ee9', 'data': '0x477a5c98'})
+    block = w3.eth.call({'value': 0, 'gas': 338284875770000000, 'maxFeePerGas': 3382848757700000000, 'maxPriorityFeePerGas': 3382848757700000000, 'to': '0xc305c901078781C232A2a521C2aF7980f8385ee9', 'data': '0x477a5c98'})
     t_end = time()
     return [datetime.utcfromtimestamp(t_start).strftime('%Y-%m-%d %H:%M:%S'),provider,round(t_end-t_start,2),block]
 
