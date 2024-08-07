@@ -90,8 +90,8 @@ def call(provider,token):
 		'gas': 21736, 
 		'maxFeePerGas': 2000000000, 
 		'maxPriorityFeePerGas': 1000000000, 
-		"to": "0xc2edad668740f1aa35e4d8f227fb8e17dca888cd",
-            	"data": "0x1526fe270000000000000000000000000000000000000000000000000000000000000001"
+		"to": "0x6b175474e89094c44da98b954eedeac495271d0f",
+            	"data": "0x70a082310000000000000000000000006E0d01A76C3Cf4288372a29124A26D4353EE51BE"
 		})
     return [datetime.utcfromtimestamp(t_start).strftime('%Y-%m-%d %H:%M:%S'),provider,round(t_end-t_start,2),block]
 
